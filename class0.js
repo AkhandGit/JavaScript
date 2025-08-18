@@ -7,7 +7,7 @@ const e=5
 const f=6
 a=a+b;
 c=c+d;
-e=e+f;
+
 console.log(a);
 console.log(c);
-console.log(e);
+console.log(e+f);
