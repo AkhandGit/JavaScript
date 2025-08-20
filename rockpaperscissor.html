@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+</head>
+<body>
+    <script>
+        function playRPS(playerChoice=''){
+            let computerMove="";
+            let randomNumber=Math.random();
+            if(randomNumber>=0 && randomNumber<1/3){
+                computerMove="Rock";
+                
+            }
+            else if(randomNumber>=1/3 && randomNumber<2/3){
+                computerMove="Scissor";
+            }
+            else if(randomNumber>=2/3 && randomNumber<1){
+                computerMove="Paper";
+            }
+            
+            if (playerChoice === computerMove){
+                alert("It's a tie!");
+            }
+            else if(playerChoice === "Rock" && computerMove==="Scissor"){
+                alert(`You win!! Player chose ${playerChoice} and Computer chose ${computerMove}`);
+            }
+            else if(playerChoice === "Scissor" && computerMove==="Paper"){
+                alert(`You win!! Player chose ${playerChoice} and Computer chose ${computerMove}`);
+            }
+            else if(playerChoice === "Paper" && computerMove==="Rock"){
+                alert(`You win!! Player chose ${playerChoice} and Computer chose ${computerMove}`);
+            }
+            else {
+                alert(`You lose!! Player chose ${playerChoice} and Computer chose ${computerMove}`);
+            }
+    
+        }
+
+        
+    </script>
+
+    <p>Rock-Paper-Scissor</p>
+
+
+    <button onclick="playRPS('Rock')">Rock</button>
+    <button onclick="playRPS('Paper')">Paper</button>
+    <button onclick="playRPS('Scissor')">Scissor</button>
+
+    
+</body>
+</html>
